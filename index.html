@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is Not Wordle.</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z973RHYC5W"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-Z973RHYC5W');
+
+        function startGame() {
+            let splashDiss = document.getElementById("splash");
+            splashDiss.style.visibility = "hidden";
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Wordlen't</h1>
+
+    <div class="fade-in" id="splash" style="visibility:visible">
+        <p>This website was developed on the land
+            of the Kaurna people. Their cultural and heritage beliefs are
+            just as important today as they were 60,000+ years ago.
+        </p>
+
+        <a href="https://adelaidia.history.sa.gov.au/subjects/kaurna-people">Find out more</a>
+        <hr>
+        <h3>Instructions</h3>
+
+        <!--<p>This is Not Wordle
+            Make a word that contains no letters present in the unknown target word.
+        </p> -->
+        <p>This game has been discontinued.
+            Thank you for playing. </p>
+        <button id="startButton" onclick="startGame()">Start</button>
+
+    </div> 
+
+    <div id="game-board">
+
+    </div>
+
+    <div id="keyboard-cont">
+        <div class="first-row">
+            <button class="keyboard-button">Q</button>
+            <button class="keyboard-button">W</button>
+            <button class="keyboard-button">E</button>
+            <button class="keyboard-button">R</button>
+            <button class="keyboard-button">T</button>
+            <button class="keyboard-button">Y</button>
+            <button class="keyboard-button">U</button>
+            <button class="keyboard-button">I</button>
+            <button class="keyboard-button">O</button>
+            <button class="keyboard-button">P</button>
+        </div>
+        <div class="second-row">
+            <button class="keyboard-button">A</button>
+            <button class="keyboard-button">S</button>
+            <button class="keyboard-button">D</button>
+            <button class="keyboard-button">F</button>
+            <button class="keyboard-button">G</button>
+            <button class="keyboard-button">H</button>
+            <button class="keyboard-button">J</button>
+            <button class="keyboard-button">K</button>
+            <button class="keyboard-button">L</button>
+        </div>
+        <div class="third-row">
+            <button class="keyboard-button">Del</button>
+            <button class="keyboard-button">Z</button>
+            <button class="keyboard-button">X</button>
+            <button class="keyboard-button">C</button>
+            <button class="keyboard-button">V</button>
+            <button class="keyboard-button">B</button>
+            <button class="keyboard-button">N</button>
+            <button class="keyboard-button">M</button>
+            <button class="keyboard-button">Enter</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="script.js" type="module"></script>
+</body>
+
+</html>
