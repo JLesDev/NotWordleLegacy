@@ -1,21 +1,16 @@
 // TODO: Change colors according to light or dark theme
-
-//import { WORDS } from "./words.json";
-
-
 const c_YELLOW = "#c9b458";
 const c_GREEN = "#6aaa64";
 const c_LIGHTBLUE = "#7cd0eb";
 const c_GRAY = "#787c7e";
 
 const baseURL = window.location.origin;
-const requestURL = baseURL + "/words.json";
+const requestURL = baseURL + "/words.json"
 const request = new Request(requestURL);
 
 const response = await fetch(request);
 const wordJSON = await response.json();
-
-let words = wordJSON["words.json"];
+let words = wordJSON["words"]
 
 const NUMBER_OF_GUESSES = 6;
 let guessesRemaining = NUMBER_OF_GUESSES;
@@ -28,7 +23,7 @@ console.log(rightGuessString);
 function initBoard() {
   let board = document.getElementById("game-board");
 
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < NUMBER_OF_GUESSES; i++) {
     let row = document.createElement("div");
     row.className = "letter-row";
 
@@ -267,5 +262,5 @@ const animateCSS = (element, animation, prefix = 'animate__') =>
       resolve('Animation ended');
     }
 
-    node.addEventListener('animationend', handleAnimationEnd, {once: true});
+    node.addEventListener('animationend', handleAnimationEnd, { once: true });
   });
