@@ -4,21 +4,35 @@ const c_GREEN = "#6aaa64";
 const c_LIGHTBLUE = "#7cd0eb";
 const c_GRAY = "#787c7e";
 
+console.log("First");
 
-
-async function getWords(file) {
+/*async function getWords() {
   const baseURL = window.location.origin;
-  const requestURL = baseURL + "/words.json"
+  const requestURL = baseURL + "/words.json";
   const request = new Request(requestURL);
   const response = await fetch(request);
   let wordsJSON = await response.json();
-  let words = wordJSON["words"]
-  return words;
-}
+  let wordsa = wordsJSON["words"];
+  console.log(wordsa[5]);
+  console.log(wordsa[500]);
+  return wordsa;
+}*/
 
+const baseURL = window.location.origin;
+const requestURL = baseURL + "/words.json";
+const request = new Request(requestURL);
+const response = await fetch(request);
+let wordsJSON = await response.json();
+let words = wordsJSON["words"];
+console.log(words[5]);
+console.log(words[500]);
 
-let words = [];
-getWords(words);
+//getWords();
+console.log("Before");
+//let words = [];
+//words = getWords();
+console.log(words[Math.floor(Math.random() * words.length)]);
+console.log("After");
 /*
 const response = async fetch(request);
 const wordJSON = await response.json();
@@ -65,6 +79,7 @@ document.addEventListener("keyup", (e) => {
   }
 
   if (pressedKey === "Enter") {
+    console.log("Checking guess");
     checkGuess();
     return;
   }
