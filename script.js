@@ -5,12 +5,12 @@ const c_LIGHTBLUE = "#7cd0eb";
 const c_GRAY = "#787c7e";
 
 const baseURL = window.location.origin;
-const requestURL = baseURL + "/words.json"
+const requestURL = baseURL + "/words.json";
 const request = new Request(requestURL);
 
 const response = async fetch(request);
 const wordJSON = await response.json();
-let words = wordJSON["words"]
+let words = wordJSON["words"];
 
 const NUMBER_OF_GUESSES = 6;
 let guessesRemaining = NUMBER_OF_GUESSES;
