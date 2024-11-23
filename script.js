@@ -5,10 +5,10 @@ const c_LIGHTBLUE = "#7cd0eb";
 const c_GRAY = "#787c7e";
 
 const baseURL = window.location.origin;
-const requestURL = baseURL + "/words.html"
+const requestURL = baseURL + "/words.json"
 const request = new Request(requestURL);
 
-const response = await fetch(request);
+const response = async fetch(request);
 const wordJSON = await response.json();
 let words = wordJSON["words"]
 
