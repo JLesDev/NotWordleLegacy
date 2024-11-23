@@ -19,7 +19,7 @@ console.log("First");
 }*/
 
 const baseURL = window.location.origin;
-const requestURL = "https://jlesdev.github.io/NotWordleLegacy/words.json";
+const requestURL = baseURL + "/NotWordleLegacy/words.json";
 const request = new Request(requestURL);
 const response = await fetch(request);
 let wordsJSON = await response.json();
