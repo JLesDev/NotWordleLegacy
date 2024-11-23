@@ -4,14 +4,24 @@ const c_GREEN = "#6aaa64";
 const c_LIGHTBLUE = "#7cd0eb";
 const c_GRAY = "#787c7e";
 
-const baseURL = window.location.origin;
-const requestURL = baseURL + "/words.json";
-const request = new Request(requestURL);
 
+
+async function getWords(file) {
+  const baseURL = window.location.origin;
+  const requestURL = baseURL + "/words.json";
+  const request = new Request(requestURL);
+  const response = await fetch(request);
+  let wordsJSON = await response.json();
+  let words = wordJSON["words"]
+  return words;
+}
+
+getWords(words);
+/*
 const response = async fetch(request);
 const wordJSON = await response.json();
 let words = wordJSON["words"];
-
+*/
 const NUMBER_OF_GUESSES = 6;
 let guessesRemaining = NUMBER_OF_GUESSES;
 let currentGuess = [];
