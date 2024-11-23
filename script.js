@@ -8,7 +8,7 @@ const c_GRAY = "#787c7e";
 
 async function getWords(file) {
   const baseURL = window.location.origin;
-  const requestURL = baseURL + "/words.json";
+  const requestURL = baseURL + "/words.json"
   const request = new Request(requestURL);
   const response = await fetch(request);
   let wordsJSON = await response.json();
@@ -16,6 +16,8 @@ async function getWords(file) {
   return words;
 }
 
+
+let words = wordJSON["words"]
 getWords(words);
 /*
 const response = async fetch(request);
