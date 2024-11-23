@@ -17,7 +17,7 @@ async function getWords(file) {
 }
 
 
-let words = wordJSON["words"]
+let words = [];
 getWords(words);
 /*
 const response = async fetch(request);
