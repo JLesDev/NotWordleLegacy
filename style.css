@@ -165,15 +165,18 @@ hr {
 #startButton {
   font-size: 1em;
   font-weight: 700;
-  margin: 1rem auto;
-  padding: 0.4rem;
+  margin: 0.5rem auto;
+  padding: 0.2rem;
 
   cursor: pointer;
   text-transform: uppercase;
   color: #000000;
 
-  width: 5rem;
-  min-height: 3rem;
+  width: 6rem;
+  min-height: 2.5rem;
+
+  border: 0;
+  border-radius: 4px;
 }
 
 @media (max-width: 800px) {
