@@ -133,8 +133,8 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 30%;
-  height: 65%;
+  width: 20%;
+  height: 40%;
 
   margin: auto;
   padding: 1rem;
@@ -184,13 +184,12 @@ hr {
     width: 100%;
   }
 
-  .keyboard-button {
-    flex: 1;
-    margin: 0 2px;
-    height: 3rem;
+  
+#splash {
 
-    font-size: 0.9rem;
-    padding: 0.2rem;
+  width: 30%;
+  height: 60%;
+
   }
 
   #keyboard-cont {
