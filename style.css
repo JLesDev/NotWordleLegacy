@@ -138,7 +138,7 @@ hr {
 
   margin: auto;
   padding: 1rem;
-  overflow: scroll;
+  overflow: hidden;
 
   text-align: center;
   line-height: 1.5;
